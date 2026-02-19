@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="My Portfolio Gallery. 映像作品、Webサイト制作、資料作成などの制作実績を掲載しています。">
+  <title>My Gallery</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header-container">
+      <h1 class="logo">
+        <a href="index.html">My work Gallery</a>
+      </h1>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="#gallery" class="nav-link">Works</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="https://x.com/Ren236_00" target="_blank" rel="noopener noreferrer" class="nav-link nav-link-x">
+            <svg class="x-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main class="main">
+    <!-- ヒーローセクション -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <p class="hero-label">my work gallery</p>
+        <h2 class="hero-title">Gallery<span class="accent">.</span></h2>
+        <p class="hero-subtitle">Webサイト・デザイン・AI制作の実績をご覧ください</p>
+        <a href="#gallery" class="hero-cta">View Works</a>
+      </div>
+      <div class="hero-scroll">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- マーキーテキスト帯 -->
+    <div class="marquee-section">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <span class="marquee-item">WEB DESIGN</span>
+          <span class="marquee-separator">✦</span>
+          <span class="marquee-item">AI CREATION</span>
+          <span class="marquee-separator">✦</span>
+          <span class="marquee-item">DIGITAL ART</span>
+          <span class="marquee-separator">✦</span>
+          <span class="marquee-item">WEB DESIGN</span>
+          <span class="marquee-separator">✦</span>
+          <span class="marquee-item">AI CREATION</span>
+          <span class="marquee-separator">✦</span>
+          <span class="marquee-item">DIGITAL ART</span>
+          <span class="marquee-separator">✦</span>
+          <span class="marquee-item">WEB DESIGN</span>
+          <span class="marquee-separator">✦</span>
+          <span class="marquee-item">AI CREATION</span>
+          <span class="marquee-separator">✦</span>
+          <span class="marquee-item">DIGITAL ART</span>
+          <span class="marquee-separator">✦</span>
+          <span class="marquee-item">WEB DESIGN</span>
+          <span class="marquee-separator">✦</span>
+          <span class="marquee-item">AI CREATION</span>
+          <span class="marquee-separator">✦</span>
+          <span class="marquee-item">DIGITAL ART</span>
+          <span class="marquee-separator">✦</span>
+        </div>
+        <div class="marquee-content" aria-hidden="true">
+          <span class="marquee-item">WEB DESIGN</span>
+          <span class="marquee-separator">✦</span>
+          <span class="marquee-item">AI CREATION</span>
+          <span class="marquee-separator">✦</span>
+          <span class="marquee-item">DIGITAL ART</span>
+          <span class="marquee-separator">✦</span>
+          <span class="marquee-item">WEB DESIGN</span>
+          <span class="marquee-separator">✦</span>
+          <span class="marquee-item">AI CREATION</span>
+          <span class="marquee-separator">✦</span>
+          <span class="marquee-item">DIGITAL ART</span>
+          <span class="marquee-separator">✦</span>
+          <span class="marquee-item">WEB DESIGN</span>
+          <span class="marquee-separator">✦</span>
+          <span class="marquee-item">AI CREATION</span>
+          <span class="marquee-separator">✦</span>
+          <span class="marquee-item">DIGITAL ART</span>
+          <span class="marquee-separator">✦</span>
+          <span class="marquee-item">WEB DESIGN</span>
+          <span class="marquee-separator">✦</span>
+          <span class="marquee-item">AI CREATION</span>
+          <span class="marquee-separator">✦</span>
+          <span class="marquee-item">DIGITAL ART</span>
+          <span class="marquee-separator">✦</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- フィルターセクション -->
+    <section class="filter-section">
+      <div class="container">
+        <!-- 検索ボックス -->
+        <div class="search-container" data-scroll="fade-up">
+          <div class="search-box">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="M21 21l-4.35-4.35"/>
+            </svg>
+            <input type="text" id="searchInput" class="search-input" placeholder="作品を検索..." aria-label="作品を検索">
+            <button class="search-clear" id="searchClear" aria-label="検索をクリア">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="filter-buttons" role="group" aria-label="作品フィルター" data-scroll="fade-up" data-scroll-delay="2">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="video">AI動画</button>
+          <button class="filter-btn" data-filter="website">Web</button>
+          <button class="filter-btn" data-filter="pdf">PDF</button>
+          <button class="filter-btn" data-filter="other">Other</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ギャラリーセクション -->
+    <section id="gallery" class="gallery-section">
+      <div class="container">
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- JavaScriptで動的に生成 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Aboutセクション -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2 class="section-title" data-scroll="fade-up">About<span class="accent">.</span></h2>
+        <div class="about-content">
+          <div class="about-text" data-scroll="fade-right" data-scroll-delay="2">
+            <p class="about-lead">
+              AI制作、Webデザイン、グラフィックデザインなど<br>
+              デジタルクリエイティブ全般を制作しています
+            </p>
+            <p>
+              テクノロジーとアートの融合をテーマに、視覚的なインパクトと機能性を両立した作品づくりを心がけています。
+              このGalleryでは、これまでの作品集を掲載しています。
+            </p>
+          </div>
+          <div class="about-stats">
+            <div class="stat-item" data-scroll="fade-up" data-scroll-delay="1">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-item" data-scroll="fade-up" data-scroll-delay="2">
+              <span class="stat-number">2+</span>
+              <span class="stat-label">AI</span>
+            </div>
+            <div class="stat-item" data-scroll="fade-up" data-scroll-delay="3">
+              <span class="stat-number">2026</span>
+              <span class="stat-label">Year</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッターマーキー -->
+  <div class="marquee-section marquee-footer">
+    <div class="marquee-track marquee-track-reverse">
+      <div class="marquee-content">
+        <span class="marquee-item">THANK YOU</span>
+        <span class="marquee-separator">◆</span>
+        <span class="marquee-item">Gallery</span>
+        <span class="marquee-separator">◆</span>
+        <span class="marquee-item">CREATIVE</span>
+        <span class="marquee-separator">◆</span>
+        <span class="marquee-item">THANK YOU</span>
+        <span class="marquee-separator">◆</span>
+        <span class="marquee-item">Gallery</span>
+        <span class="marquee-separator">◆</span>
+        <span class="marquee-item">CREATIVE</span>
+        <span class="marquee-separator">◆</span>
+        <span class="marquee-item">THANK YOU</span>
+        <span class="marquee-separator">◆</span>
+        <span class="marquee-item">Gallery</span>
+        <span class="marquee-separator">◆</span>
+        <span class="marquee-item">CREATIVE</span>
+        <span class="marquee-separator">◆</span>
+        <span class="marquee-item">THANK YOU</span>
+        <span class="marquee-separator">◆</span>
+        <span class="marquee-item">Gallery</span>
+        <span class="marquee-separator">◆</span>
+        <span class="marquee-item">CREATIVE</span>
+        <span class="marquee-separator">◆</span>
+      </div>
+      <div class="marquee-content" aria-hidden="true">
+        <span class="marquee-item">THANK YOU</span>
+        <span class="marquee-separator">◆</span>
+        <span class="marquee-item">Gallery</span>
+        <span class="marquee-separator">◆</span>
+        <span class="marquee-item">CREATIVE</span>
+        <span class="marquee-separator">◆</span>
+        <span class="marquee-item">THANK YOU</span>
+        <span class="marquee-separator">◆</span>
+        <span class="marquee-item">Gallery</span>
+        <span class="marquee-separator">◆</span>
+        <span class="marquee-item">CREATIVE</span>
+        <span class="marquee-separator">◆</span>
+        <span class="marquee-item">THANK YOU</span>
+        <span class="marquee-separator">◆</span>
+        <span class="marquee-item">Gallery</span>
+        <span class="marquee-separator">◆</span>
+        <span class="marquee-item">CREATIVE</span>
+        <span class="marquee-separator">◆</span>
+        <span class="marquee-item">THANK YOU</span>
+        <span class="marquee-separator">◆</span>
+        <span class="marquee-item">Gallery</span>
+        <span class="marquee-separator">◆</span>
+        <span class="marquee-item">CREATIVE</span>
+        <span class="marquee-separator">◆</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <!-- 装飾要素 -->
+    <div class="footer-glow footer-glow-1"></div>
+    <div class="footer-glow footer-glow-2"></div>
+    <div class="footer-particles">
+      <span class="particle"></span>
+      <span class="particle"></span>
+      <span class="particle"></span>
+      <span class="particle"></span>
+      <span class="particle"></span>
+    </div>
+    
+    <!-- Back to Top ボタン -->
+    <a href="#" class="back-to-top" aria-label="ページトップへ戻る">
+      <span class="back-to-top-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+      </span>
+      <span class="back-to-top-text">TOP</span>
+    </a>
+    
+    <div class="container">
+      <!-- CTAセクション -->
+      <div class="footer-cta">
+        <h2 class="footer-cta-title">
+          <span class="cta-line" data-scroll="fade-up" data-scroll-delay="1">Let's</span>
+          <span class="cta-line cta-gradient" data-scroll="fade-up" data-scroll-delay="2">Create</span>
+          <span class="cta-line" data-scroll="fade-up" data-scroll-delay="3">Together<span class="accent">.</span></span>
+        </h2>
+      </div>
+      
+      <!-- スキルバッジ -->
+      <div class="footer-skills">
+        <div class="skill-badge" data-scroll="scale-up" data-scroll-delay="1"><span class="skill-icon">🌐</span> Web Design</div>
+        <div class="skill-badge" data-scroll="scale-up" data-scroll-delay="2"><span class="skill-icon">🤖</span> AI Creation</div>
+        <div class="skill-badge" data-scroll="scale-up" data-scroll-delay="3"><span class="skill-icon">🎨</span> Digital Art</div>
+        <div class="skill-badge" data-scroll="scale-up" data-scroll-delay="4"><span class="skill-icon">📊</span> PDF Design</div>
+        <div class="skill-badge" data-scroll="scale-up" data-scroll-delay="5"><span class="skill-icon">🎬</span> Ai video</div>
+      </div>
+      
+      <!-- メインフッターエリア -->
+      <div class="footer-main" data-scroll="fade-up" data-scroll-delay="2">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">Gallery<span class="accent">.</span></a>
+          <p class="footer-tagline">Vibe Coding</p>
+          <div class="footer-brand-decoration">
+            <span class="decoration-line"></span>
+            <span class="decoration-dot"></span>
+          </div>
+        </div>
+        
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h3 class="footer-title">Navigate</h3>
+            <ul class="footer-links">
+              <li><a href="#gallery"><span class="link-arrow">→</span> Works</a></li>
+              <li><a href="#about"><span class="link-arrow">→</span> About</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-section">
+            <h3 class="footer-title">Connect</h3>
+            <a href="https://github.com/R-en73" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+              <div class="social-icon-wrapper">
+                <svg class="github-icon-large" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+              </div>
+              <div class="social-info">
+                <span class="social-label">GitHub</span>
+                <span class="social-handle">@R-en73</span>
+              </div>
+              <span class="social-arrow">↗</span>
+            </a>
+            <a href="https://zenn.dev/ren00001" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+              <div class="social-icon-wrapper">
+                <svg class="zenn-icon-large" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M.264 23.771h4.984c.264 0 .498-.147.645-.352L19.614.874c.176-.293-.029-.645-.381-.645h-4.72c-.235 0-.44.117-.557.323L.03 23.361c-.088.176.029.41.234.41zM17.445 23.419l6.479-10.408c.205-.323-.029-.733-.41-.733h-4.691c-.176 0-.352.088-.44.235l-6.655 10.643c-.176.264.029.616.352.616h4.779c.234-.001.468-.118.586-.353z"/>
+                </svg>
+              </div>
+              <div class="social-info">
+                <span class="social-label">Zenn</span>
+                <span class="social-handle">@ren00001</span>
+              </div>
+              <span class="social-arrow">↗</span>
+            </a>
+            <a href="https://x.com/Ren236_00" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+              <div class="social-icon-wrapper">
+                <svg class="x-icon-large" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </div>
+              <div class="social-info">
+                <span class="social-label">X (Twitter)</span>
+                <span class="social-handle">@Ren236_00</span>
+              </div>
+              <span class="social-arrow">↗</span>
+            </a>
+          </div>
+          
+          <div class="footer-section">
+            <h3 class="footer-title">Tech Stack</h3>
+            <div class="footer-tech-icons">
+              <span class="tech-icon" title="HTML5">⚡</span>
+              <span class="tech-icon" title="CSS3">🎨</span>
+              <span class="tech-icon" title="JavaScript">⚙️</span>
+              <span class="tech-icon" title="AI Tools">🤖</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- フッターボトム -->
+      <div class="footer-bottom">
+        <div class="footer-line">
+          <span class="line-glow"></span>
+        </div>
+        <div class="footer-bottom-content">
+          <p class="copyright">
+            <span class="copyright-symbol">©</span> 2026 my Gallery
+          </p>
+          <div class="footer-bottom-center">
+            <span class="status-dot"></span>
+          </div>
+          <p class="footer-made">
+           Vibe Coding  Made with <span class="heart">♥</span> & <span class="code-icon">&lt;/&gt;</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- フッター装飾ライン -->
+    <div class="footer-edge-line"></div>
+  </footer>
+
+  <!-- モーダル -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" aria-label="閉じる">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <div class="modal-body">
+        <div class="modal-media-container" id="modalMediaContainer">
+          <!-- 動的に画像またはビデオを生成 -->
+        </div>
+        <div class="modal-info">
+          <span class="modal-category" id="modalCategory"></span>
+          <h3 class="modal-title" id="modalTitle"></h3>
+          <p class="modal-description" id="modalDescription"></p>
+          <p class="modal-date" id="modalDate"></p>
+          <div class="modal-links" id="modalLinks">
+            <!-- 動的に生成 -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- モバイルメニュー -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-nav">
+      <ul class="mobile-nav-list">
+        <li><a href="#gallery" class="mobile-nav-link">Works</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="https://x.com/Ren236_00" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">
+          <svg class="x-icon" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
