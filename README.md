@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Portfolio Gallery - Y-Aoyama
 
 作品ギャラリーサイト（ポートフォリオ）
@@ -76,3 +77,7 @@ Galleryサイト/
 ## ライセンス
 
 © 2026 Y-Aoyama. All rights reserved.
+=======
+# WebGallerytest
+Webサイトの作品集サイト
+>>>>>>> ecc4283aaa5d124e68acabd4e7d550273a597e07
