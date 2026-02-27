@@ -156,6 +156,19 @@ const portfolioData = [
     url: null,
     pdf: null,
     date: "2026年2月"
+  },
+  {
+    id: 12,
+    title: "卒業進級制作展 文章説明資料",
+    category: "pdf",
+    categoryLabel: "資料（PDF）",
+    thumbnail: "img/卒業進級制作展文章説明資料サムネ画像.png",
+    image: "img/卒業進級制作展文章説明資料サムネ画像.png",
+    video: null,
+    description: "卒業進級制作展のWebサイトの技術を文章での説明資料。作品の背景やコンセプトを文章でまとめました。",
+    url: null,
+    pdf: "pdf/卒業進級制作展文章説明資料.pdf",
+    date: "2026年2月"
   }
 ];
 
