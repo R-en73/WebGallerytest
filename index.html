@@ -12,6 +12,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- SVG Definitions for gradients -->
+  <svg style="position: absolute; width: 0; height: 0;">
+    <defs>
+      <linearGradient id="skillGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#00ffff"/>
+        <stop offset="100%" stop-color="#00d4ff"/>
+      </linearGradient>
+    </defs>
+  </svg>
+  
   <!-- ヘッダー -->
   <header class="header">
     <div class="header-container">
@@ -22,7 +32,7 @@
         <ul class="nav-list">
           <li><a href="#gallery" class="nav-link">Works</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="https://x.com/Ren236_00" target="_blank" rel="noopener noreferrer" class="nav-link nav-link-x">
+          <li><a href="https://x.com/home?lang=ja" target="_blank" rel="noopener noreferrer" class="nav-link nav-link-x">
             <svg class="x-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
               <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
             </svg>
@@ -180,6 +190,43 @@
             </div>
           </div>
         </div>
+        
+        <!-- スキルセット -->
+        <div class="skills-section" data-scroll="fade-up" data-scroll-delay="4">
+          <h3 class="skills-title">Skills</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-circle">
+                <svg viewBox="0 0 120 120">
+                  <circle class="skill-bg" cx="60" cy="60" r="50"/>
+                  <circle class="skill-progress" cx="60" cy="60" r="50" style="--progress: 50;"/>
+                </svg>
+                <span class="skill-percent">50%</span>
+              </div>
+              <span class="skill-name">HTML/CSS</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-circle">
+                <svg viewBox="0 0 120 120">
+                  <circle class="skill-bg" cx="60" cy="60" r="50"/>
+                  <circle class="skill-progress js-progress" cx="60" cy="60" r="50" style="--progress: 10;"/>
+                </svg>
+                <span class="skill-percent">10%</span>
+              </div>
+              <span class="skill-name">JavaScript</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-circle">
+                <svg viewBox="0 0 120 120">
+                  <circle class="skill-bg" cx="60" cy="60" r="50"/>
+                  <circle class="skill-progress ai-progress" cx="60" cy="60" r="50" style="--progress: 40;"/>
+                </svg>
+                <span class="skill-percent">40%</span>
+              </div>
+              <span class="skill-name">AI Coding</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -330,7 +377,7 @@
               </div>
               <span class="social-arrow">↗</span>
             </a>
-            <a href="https://x.com/Ren236_00" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+            <a href="https://x.com/home?lang=ja" target="_blank" rel="noopener noreferrer" class="footer-social-link">
               <div class="social-icon-wrapper">
                 <svg class="x-icon-large" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
@@ -412,7 +459,7 @@
       <ul class="mobile-nav-list">
         <li><a href="#gallery" class="mobile-nav-link">Works</a></li>
         <li><a href="#about" class="mobile-nav-link">About</a></li>
-        <li><a href="https://x.com/Ren236_00" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">
+        <li><a href="https://x.com/home?lang=ja" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">
           <svg class="x-icon" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
           </svg>

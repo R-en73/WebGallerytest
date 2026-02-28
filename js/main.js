@@ -704,6 +704,33 @@ function initScrollAnimations() {
     cardObserver.observe(galleryGrid);
   }
 
+  // スキルゲージアニメーション用Observer
+  const skillObserverOptions = {
+    root: null,
+    rootMargin: '0px 0px -100px 0px',
+    threshold: 0.3
+  };
+
+  const skillObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const skillItems = document.querySelectorAll('.skill-item');
+        skillItems.forEach((item, index) => {
+          setTimeout(() => {
+            item.classList.add('animated');
+          }, index * 200); // 200msずつ遅延でstagger効果
+        });
+        observer.unobserve(entry.target);
+      }
+    });
+  }, skillObserverOptions);
+
+  // スキルセクションを監視
+  const skillsSection = document.querySelector('.skills-section');
+  if (skillsSection) {
+    skillObserver.observe(skillsSection);
+  }
+
   // パララックス効果
   initParallaxEffect();
 }

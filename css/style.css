@@ -1038,6 +1038,133 @@ button {
 }
 
 /* ===================================
+   Skills Section
+   =================================== */
+.skills-section {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.skills-title {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 0%, #00ffff 50%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 50px;
+  letter-spacing: 0.1em;
+}
+
+.skills-grid {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.skill-circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  transition: transform 0.3s ease;
+}
+
+.skill-item.animated .skill-circle {
+  transform: scale(1.05);
+}
+
+.skill-circle svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.skill-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.05);
+  stroke-width: 8;
+  transition: stroke 0.3s ease;
+}
+
+.skill-item.animated .skill-bg {
+  stroke: rgba(255, 255, 255, 0.1);
+}
+
+.skill-progress {
+  fill: none;
+  stroke: url(#skillGradient);
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 314.16;
+  stroke-dashoffset: 314.16;
+  transition: stroke-dashoffset 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.5s ease;
+  filter: drop-shadow(0 0 4px rgba(0, 255, 255, 0.3));
+}
+
+.skill-item.animated .skill-progress {
+  stroke-dashoffset: calc(314.16 * (1 - var(--progress) / 100));
+  filter: drop-shadow(0 0 12px rgba(0, 255, 255, 0.7));
+}
+
+.skill-progress.js-progress {
+  stroke: #f7df1e;
+  filter: drop-shadow(0 0 4px rgba(247, 223, 30, 0.3));
+}
+
+.skill-item.animated .skill-progress.js-progress {
+  filter: drop-shadow(0 0 12px rgba(247, 223, 30, 0.7));
+}
+
+.skill-progress.ai-progress {
+  stroke: #8b5cf6;
+  filter: drop-shadow(0 0 4px rgba(139, 92, 246, 0.3));
+}
+
+.skill-item.animated .skill-progress.ai-progress {
+  filter: drop-shadow(0 0 12px rgba(139, 92, 246, 0.7));
+}
+
+.skill-percent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.4rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #00ffff 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0.5;
+  transition: opacity 0.5s ease 0.3s, transform 0.5s ease 0.3s;
+}
+
+.skill-item.animated .skill-percent {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.skill-name {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+}
+
+.skill-item.animated .skill-name {
+  color: var(--text-primary);
+}
+
+/* ===================================
    Footer
    =================================== */
 .footer {
@@ -2200,6 +2327,32 @@ button {
 
   .stat-number {
     font-size: 2.75rem;
+  }
+
+  .skills-section {
+    margin-top: 60px;
+  }
+
+  .skills-title {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+
+  .skills-grid {
+    gap: 30px;
+  }
+
+  .skill-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .skill-percent {
+    font-size: 1.2rem;
+  }
+
+  .skill-name {
+    font-size: 0.75rem;
   }
 
   .modal-content {
