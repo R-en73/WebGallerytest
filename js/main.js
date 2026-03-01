@@ -630,9 +630,32 @@ window.addEventListener('resize', () => {
 });
 
 // ===================================
+// スプラッシュスクリーン制御
+// ===================================
+function initSplashScreen() {
+  const splashScreen = document.getElementById('splashScreen');
+  
+  if (!splashScreen) return;
+  
+  // ローダーアニメーション完了後にフェードアウト
+  // 1.1s delay + 2s animation = 3.1s + 余裕
+  setTimeout(() => {
+    splashScreen.classList.add('fade-out');
+    
+    // フェードアウト完了後に要素を削除
+    setTimeout(() => {
+      splashScreen.remove();
+    }, 1000);
+  }, 3500);
+}
+
+// ===================================
 // 初期化
 // ===================================
 document.addEventListener('DOMContentLoaded', () => {
+  // スプラッシュスクリーンを初期化
+  initSplashScreen();
+  
   // ギャラリーを描画
   renderGallery(portfolioData);
   

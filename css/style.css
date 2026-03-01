@@ -110,6 +110,353 @@ body::after {
   z-index: -1;
 }
 
+/* ===================================
+   Splash Screen (Opening Logo Animation)
+   =================================== */
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease, visibility 1s ease;
+  overflow: hidden;
+}
+
+.splash-screen::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse at 30% 30%, rgba(0, 255, 255, 0.2) 0%, transparent 40%),
+    radial-gradient(ellipse at 70% 70%, rgba(139, 92, 246, 0.18) 0%, transparent 40%),
+    radial-gradient(ellipse at 50% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 60%),
+    radial-gradient(circle at 20% 80%, rgba(255, 0, 170, 0.1) 0%, transparent 30%),
+    radial-gradient(circle at 80% 20%, rgba(0, 255, 255, 0.1) 0%, transparent 30%);
+  animation: splashBgPulse 2s ease-in-out infinite, splashBgMove 8s ease-in-out infinite;
+}
+
+@keyframes splashBgPulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+@keyframes splashBgMove {
+  0%, 100% { 
+    background-position: 0% 0%, 100% 100%, 50% 50%, 0% 100%, 100% 0%;
+  }
+  25% {
+    background-position: 100% 0%, 0% 100%, 30% 70%, 20% 80%, 80% 20%;
+  }
+  50% { 
+    background-position: 100% 100%, 0% 0%, 70% 30%, 30% 70%, 70% 30%;
+  }
+  75% {
+    background-position: 0% 100%, 100% 0%, 50% 50%, 10% 90%, 90% 10%;
+  }
+}
+
+.splash-screen.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+}
+
+.splash-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  z-index: 1;
+  position: relative;
+}
+
+.splash-logo {
+  width: 250px;
+  height: auto;
+  animation: 
+    splashLogoAppear 1.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+    splashLogoFloat 3s ease-in-out 1.4s infinite,
+    splashLogoPulse 2s ease-in-out 1.4s infinite,
+    splashLogoHue 5s linear 1.4s infinite;
+  opacity: 0;
+  transform: scale(0) rotate(-20deg);
+  filter: drop-shadow(0 0 30px var(--accent-glow)) drop-shadow(0 0 60px var(--accent-glow-purple));
+}
+
+@keyframes splashLogoAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(-20deg);
+    filter: drop-shadow(0 0 0 transparent);
+  }
+  20% {
+    opacity: 0.8;
+    transform: scale(0.6) rotate(-10deg);
+    filter: drop-shadow(0 0 20px var(--accent-glow));
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1.12) rotate(4deg);
+    filter: drop-shadow(0 0 50px var(--accent-glow)) drop-shadow(0 0 80px var(--accent-glow-purple));
+  }
+  60% {
+    transform: scale(0.95) rotate(-2deg);
+    filter: drop-shadow(0 0 60px var(--accent-primary)) drop-shadow(0 0 100px var(--accent-tertiary));
+  }
+  80% {
+    transform: scale(1.05) rotate(1deg);
+    filter: drop-shadow(0 0 45px var(--accent-glow)) drop-shadow(0 0 85px var(--accent-glow-purple));
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    filter: drop-shadow(0 0 40px var(--accent-glow)) drop-shadow(0 0 80px var(--accent-glow-purple));
+  }
+}
+
+@keyframes splashLogoFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-10px) rotate(-1.5deg) scale(1.01);
+  }
+  50% {
+    transform: translateY(-4px) rotate(0deg) scale(1);
+  }
+  75% {
+    transform: translateY(-10px) rotate(1.5deg) scale(1.01);
+  }
+}
+
+@keyframes splashLogoPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 40px var(--accent-glow)) drop-shadow(0 0 80px var(--accent-glow-purple)) brightness(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 55px var(--accent-primary)) drop-shadow(0 0 100px var(--accent-tertiary)) brightness(1.15);
+  }
+}
+
+@keyframes splashLogoHue {
+  0% {
+    filter: drop-shadow(0 0 40px var(--accent-glow)) drop-shadow(0 0 80px var(--accent-glow-purple)) hue-rotate(0deg);
+  }
+  50% {
+    filter: drop-shadow(0 0 45px var(--accent-glow)) drop-shadow(0 0 90px var(--accent-glow-purple)) hue-rotate(15deg);
+  }
+  100% {
+    filter: drop-shadow(0 0 40px var(--accent-glow)) drop-shadow(0 0 80px var(--accent-glow-purple)) hue-rotate(0deg);
+  }
+}
+
+/* ロゴの背後に輝くリング効果 */
+.splash-content::before {
+  content: '';
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    var(--accent-primary) 60deg,
+    transparent 120deg,
+    var(--accent-tertiary) 180deg,
+    transparent 240deg,
+    var(--accent-secondary) 300deg,
+    transparent 360deg
+  );
+  animation: splashRingSpin 6s linear infinite, splashRingPulse 3s ease-in-out infinite;
+  opacity: 0;
+  filter: blur(25px);
+}
+
+@keyframes splashRingSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes splashRingPulse {
+  0%, 100% { opacity: 0.2; scale: 1; }
+  50% { opacity: 0.4; scale: 1.05; }
+}
+
+/* 光の粒子エフェクト */
+.splash-content::after {
+  content: '';
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  background: 
+    radial-gradient(circle at 20% 30%, var(--accent-primary) 0%, transparent 3%),
+    radial-gradient(circle at 80% 20%, var(--accent-tertiary) 0%, transparent 2%),
+    radial-gradient(circle at 70% 80%, var(--accent-secondary) 0%, transparent 3%),
+    radial-gradient(circle at 30% 70%, var(--accent-primary) 0%, transparent 2%),
+    radial-gradient(circle at 50% 50%, var(--accent-tertiary) 0%, transparent 4%);
+  animation: splashParticles 6s ease-in-out infinite;
+  opacity: 0;
+}
+
+@keyframes splashParticles {
+  0%, 100% { 
+    opacity: 0.4; 
+    transform: scale(1) rotate(0deg); 
+  }
+  50% { 
+    opacity: 0.6; 
+    transform: scale(1.08) rotate(90deg); 
+  }
+}
+
+.splash-text {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 300% 300%;
+  animation: 
+    splashTextAppear 1.1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s forwards,
+    splashTextGlow 2.5s ease-in-out 1.7s infinite,
+    gradientShift 4s ease infinite;
+  opacity: 0;
+  transform: translateY(30px) scale(0.9);
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+  position: relative;
+}
+
+@keyframes splashTextAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+    letter-spacing: 0.2em;
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.03);
+    letter-spacing: 0.12em;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    letter-spacing: 0.1em;
+  }
+}
+
+@keyframes splashTextGlow {
+  0%, 100% {
+    text-shadow: 0 0 30px rgba(0, 255, 255, 0.5), 0 0 60px rgba(139, 92, 246, 0.3);
+    filter: brightness(1);
+  }
+  50% {
+    text-shadow: 0 0 40px rgba(0, 255, 255, 0.7), 0 0 80px rgba(139, 92, 246, 0.5), 0 0 120px rgba(0, 212, 255, 0.3);
+    filter: brightness(1.1);
+  }
+}
+
+.splash-loader {
+  width: 250px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  animation: splashLoaderAppear 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.9s forwards;
+  opacity: 0;
+  position: relative;
+}
+
+.splash-loader::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: var(--accent-gradient);
+  border-radius: 6px;
+  opacity: 0.3;
+  filter: blur(4px);
+  animation: loaderGlow 1.5s ease-in-out infinite;
+}
+
+@keyframes loaderGlow {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 0.45; }
+}
+
+@keyframes splashLoaderAppear {
+  0% { opacity: 0; width: 0; transform: scaleY(0.5); }
+  70% { transform: scaleY(1.2); }
+  100% { opacity: 1; width: 250px; transform: scaleY(1); }
+}
+
+.splash-loader-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary), var(--accent-tertiary), var(--accent-primary));
+  background-size: 300% 100%;
+  border-radius: 4px;
+  animation: 
+    splashLoaderProgress 2s cubic-bezier(0.25, 0.1, 0.25, 1) 1.1s forwards,
+    loaderShimmer 1.5s linear infinite;
+  box-shadow: 0 0 12px var(--accent-glow), 0 0 24px var(--accent-glow), 0 0 36px var(--accent-glow-purple);
+}
+
+@keyframes splashLoaderProgress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+@keyframes loaderShimmer {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 300% 0%; }
+}
+
+/* Responsive splash screen */
+@media (max-width: 767px) {
+  .splash-logo {
+    width: 180px;
+  }
+  
+  .splash-text {
+    font-size: 1.6rem;
+  }
+  
+  .splash-loader {
+    width: 180px;
+  }
+  
+  .splash-content::before {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .splash-content::after {
+    width: 280px;
+    height: 280px;
+  }
+  
+  @keyframes splashLoaderAppear {
+    0% { opacity: 0; width: 0; transform: scaleY(0); }
+    50% { transform: scaleY(1.5); }
+    100% { opacity: 1; width: 180px; transform: scaleY(1); }
+  }
+}
+
 img {
   max-width: 100%;
   height: auto;
